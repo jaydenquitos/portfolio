@@ -288,6 +288,10 @@ body::before {
   gap: 1rem;
 }
 
+.resume-grid-wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .project-card {
   padding: 1.4rem;
 }
@@ -303,6 +307,10 @@ body::before {
 .resume-card h3 {
   margin: 0 0 1rem;
   font-size: 1.4rem;
+}
+
+.resume-card-full {
+  grid-column: 1 / -1;
 }
 
 .resume-item + .resume-item {
@@ -325,6 +333,23 @@ body::before {
   margin-top: 0.3rem;
   margin-bottom: 0.7rem;
   font-size: 0.9rem;
+}
+
+.resume-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 0.85rem;
+}
+
+.resume-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.resume-bullets li + li {
+  margin-top: 0.45rem;
 }
 
 .compact {
