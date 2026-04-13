@@ -37,6 +37,12 @@ body[data-page="resume"] {
     linear-gradient(180deg, #f7f1ea 0%, #efe5db 100%);
 }
 
+body[data-page="home"] {
+  background:
+    linear-gradient(180deg, rgba(17, 12, 9, 0.12), rgba(247, 241, 234, 0) 30%),
+    linear-gradient(180deg, #f8f3eb 0%, #efe6db 100%);
+}
+
 body {
   overflow-y: scroll;
 }
@@ -157,6 +163,15 @@ body[data-page="resume"] .nav a.active {
 .page-hero {
   padding: 3rem 0 1rem;
   max-width: 48rem;
+}
+
+.home-page-hero {
+  padding-top: 4.25rem;
+  max-width: 42rem;
+}
+
+.home-page-hero h1 {
+  line-height: 1.04;
 }
 
 .resume-page-hero {
@@ -319,6 +334,70 @@ body[data-page="resume"] .resume-page-hero .lede {
   gap: 1rem;
 }
 
+.home-profile {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.home-photo-wrap {
+  position: relative;
+}
+
+.home-photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: auto 8% -4% 8%;
+  height: 18%;
+  background: rgba(29, 26, 22, 0.16);
+  filter: blur(28px);
+  z-index: 0;
+}
+
+.home-photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 34px 90px rgba(45, 27, 15, 0.18);
+}
+
+.home-summary {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: 0.25rem;
+}
+
+.simple-panel {
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.simple-panel h2 {
+  margin: 0 0 0.7rem;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.simple-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  padding-top: 0.25rem;
+}
+
 .stacked-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -403,7 +482,7 @@ body[data-page="resume"] .resume-page-hero .lede {
   gap: 1rem;
   padding: 1.5rem 0 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .footer-links {
@@ -417,6 +496,7 @@ body[data-page="resume"] .resume-page-hero .lede {
 .footer-icon {
   color: var(--muted);
   text-decoration: none;
+  font-size: 0.95rem;
   transition: color 180ms ease, transform 180ms ease;
 }
 
@@ -457,6 +537,7 @@ body[data-page="resume"] .resume-page-hero .lede {
 
 @media (max-width: 900px) {
   .hero,
+  .home-profile,
   .stacked-grid,
   .project-grid,
   .about-layout,
