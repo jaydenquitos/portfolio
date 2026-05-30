@@ -390,6 +390,7 @@ body[data-page="resume"] .resume-page-hero .lede {
   color: var(--muted);
   line-height: 1.7;
 }
+
 .home-links {
   display: flex;
   flex-wrap: wrap;
@@ -474,6 +475,118 @@ body[data-page="resume"] .resume-page-hero .lede {
   gap: 1rem;
 }
 
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  gap: 5rem;
+  padding-top: 4rem;
+}
+
+.contact-form-column h1,
+.contact-info-column h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.contact-info-column h2 {
+  max-width: 10ch;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.35rem;
+  margin-top: 2.25rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form label span {
+  color: var(--accent);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+  color: var(--text);
+  background: rgba(255, 248, 240, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(198, 93, 58, 0.28);
+  border-color: rgba(198, 93, 58, 0.46);
+}
+
+.contact-form .button {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact-info-column {
+  padding-top: 0.1rem;
+}
+
+.contact-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-top: 2.4rem;
+  border-radius: 16px;
+  color: #fff8f0;
+  background: var(--text);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.contact-linkedin:hover {
+  transform: translateY(-2px);
+  background: var(--accent-deep);
+}
+
+.contact-info-block {
+  margin-top: 1.45rem;
+}
+
+.contact-info-block p {
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+}
+
+.contact-info-block a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-info-block a:hover {
+  color: var(--accent-deep);
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -523,20 +636,10 @@ body[data-page="resume"] .resume-page-hero .lede {
   fill: currentColor;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 700ms ease, transform 700ms ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media (max-width: 900px) {
   .hero,
   .home-profile,
+  .contact-layout,
   .stacked-grid,
   .project-grid,
   .about-layout,
